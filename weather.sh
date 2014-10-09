@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # This is a simple script that downloads current weather conditions and zone
 # forecast from the National Weather Service and displays them.

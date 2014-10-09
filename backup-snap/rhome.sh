@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # rsync backup script
 # usage: ./rbackup.sh /media/backup
 

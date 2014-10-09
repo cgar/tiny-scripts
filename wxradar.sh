@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Get weather radar image from the New Jersey area from http://weather.gov
 # View via /usr/bin/feh

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 # Display system information and statistics
 
 SERVER="cgarcia.org"
