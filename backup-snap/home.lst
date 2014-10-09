@@ -1,0 +1,12 @@
+# Include
+
+# Exclude
+- cgar/.cache/*
+- cgar/.mozilla/*
+- cgar/.thunderbird/*
+- cgar/.config/chromium/*
+- cgar/.local/share/tracker/*
+- cgar/.local/share/Trash/*
+- cgar/.adobe/*
+- cgar/.electrum/blockchain_headers
+- cgar/Git/*

@@ -1,0 +1,34 @@
+#!/bin/bash
+# Display system information and statistics
+
+SERVER="cgarcia.org"
+UP=`uptime`
+DISK=`df -h`
+FREE=`free -m`
+CPU=`top -b -n 1 |grep ^Cpu`
+PS=`ps aux`
+NET=`vnstat`
+
+# line divider
+DL="=================================================================="
+
+FINAL="${DL} 
+`date`
+${DL}
+${SERVER} 
+${DL} 
+${UP}
+${DL}
+${DISK}
+${DL}
+${FREE}
+${DL}
+${CPU}
+${DL}
+${PS}
+${DL}
+${NET}
+${DL}
+"
+
+echo "${FINAL}"

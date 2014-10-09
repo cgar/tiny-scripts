@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+# Backs-up the home directory to local and remote location
+# Change the following values depending on your test case
+
+BACKUPDIR=/home
+BACKUPFILES=$USER
+TARFILE=/var/tmp/home_$USER.tar
+BZIPFILE=/var/tmp/home_$USER.tar.bz2
+SERVER=remote
+REMOTEDIR=/var/backups/
+LOGFILE=/var/log/backups.log
+
+cd $BACKUPDIR
+
+# Creating the archive
+tar cf $TARFILE $BACKUPFILES > /dev/null 2>&1
+
+# Remove the old bzip2 file and redirects errors if missing.
+# Create the new compressed file.
+rm $BZIPFILE 2> /dev/null
+bzip2 $TARFILE
+
+# Copy the file to a remote host listed under ~/.ssh/config or
+# /etc/ssh/ssh_config for a system wide config
+scp $BZIPFILE $SERVER:$REMOTEDIR > /dev/null 2>&1
+
+# Timestamp the logfile
+date >> $LOGFILE
+echo backup succeeded >> $LOGFILE

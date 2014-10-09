@@ -1,0 +1,23 @@
+# Include
++ /dev/console
++ /dev/initctl
++ /dev/null
++ /dev/zero
+
+# Exclude
+- /lib/*
+- /dev/*
+- /lib64/*
+- /proc/*
+- /tmp/*
+- /usr/*
+- /opt/*
+- /var/*
+- /sys/*
+- /root/*
+- /mnt/*
+- lost+found/
+- /etc/udev/*
+- /sbin/*
+- /run/*
+- /boot/*
