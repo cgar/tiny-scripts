@@ -12,3 +12,5 @@ A decent few and simple scripts in current use.
 >    weather.sh      -   Display the weather in console
 >    
 >    wxradar.sh      -   Display a radar image of the weather
+>
+>    syncforks.py    -   Syncs all forks inside the Development folder
