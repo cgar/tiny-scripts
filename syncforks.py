@@ -18,7 +18,7 @@ ansible = "/home/cgar/Development/ansible"
 
 
 master_forks = (codespell, flask, jekyll, linode_docs, linux, pelican, pep8, ProjectToxCore, vagrant)
-devel_forks = (ansible, test_fork1, test_fork2)
+#devel_forks = (ansible, test_fork1, test_fork2)
 
 
 for forks in master_forks:
