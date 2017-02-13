@@ -4,24 +4,37 @@ import os
 import subprocess
 
 
-# Master Forks
-root_dir = "/home/cgar/Development/"
-iron = "/home/cgar/Development/iron/"
-linode_docs = "/home/cgar/Development/linode-docs/"
-piston = "/home/cgar/Development/piston/"
+# Original
+linux = "/home/cgar/Development/linux/"
+openbsd = "/home/cgar/Development/OpenBSD/"
+
+original = (linux, openbsd)
+
+# Master branch
 rust = "/home/cgar/Development/rust/"
-servo = "/home/cgar/Development/servo/"
+python = "/home/cgar/Development/cpython/"
 
-master_forks = (iron, linode_docs, piston, rust, servo)
+masterForks = (rust, python)
 
-for forks in master_forks:
+# Devel branch
+ansible = "/home/cgar/Development/ansible/"
+
+develForks = (ansible)
+
+# Start sync
+for forks in original:
+    os.chdir(forks)
+    subprocess.call("git pull", shell=True)
+
+for forks in masterForks:
     os.chdir(forks)
     subprocess.call("git fetch upstream", shell=True)
     subprocess.call("git merge upstream/master", shell=True)
     subprocess.call("git push", shell=True)
 
-# Devel branch
-# os.chdir(ansible)
-# subprocess.call("git fetch upstream", shell=True)
-# subprocess.call("git merge upstream/devel", shell=True)
-# subprocess.call("git push", shell=True)
+
+# for forks in develForks:
+os.chdir(ansible)
+subprocess.call("git fetch upstream", shell=True)
+subprocess.call("git merge upstream/devel", shell=True)
+subprocess.call("git push", shell=True)
