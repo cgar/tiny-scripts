@@ -13,8 +13,13 @@ original = (linux, openbsd)
 # Master branch
 rust = "/home/cgar/Development/rust/"
 python = "/home/cgar/Development/cpython/"
+bedrock = "/home/cgar/Development/mozilla_org_bedrock/"
+devguide = "/home/cgar/Development/python_devguide/"
+django = "/home/cgar/Development/django/"
+servo = "/home/cgar/Development/servo/"
+flask = "/home/cgar/Development/flask/"
 
-masterForks = (rust, python)
+masterForks = (rust, python, bedrock, devguide, django, servo, flask)
 
 # Devel branch
 ansible = "/home/cgar/Development/ansible/"
